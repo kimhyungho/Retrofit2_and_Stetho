@@ -2,10 +2,7 @@ package com.appdev.retrofit
 
 import android.app.Application
 import android.content.Context
-import com.facebook.stetho.Stetho
-import com.facebook.stetho.okhttp3.StethoInterceptor
 import okhttp3.Interceptor
-import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -15,9 +12,7 @@ class MasterApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Stetho.initializeWithDefaults(this)
         createRetrofit()
-        // chrome://inspect/#device
     }
 
     fun createRetrofit() {
@@ -36,16 +31,9 @@ class MasterApplication : Application() {
 //            }
 //        }
 
-        // if you want to add headers or client (Sthetho), refer to this text
-//        val client = OkHttpClient.Builder()
-//            .addInterceptor(header)                         // 헤더를 추가한 신호 인터셉트함
-//            .addNetworkInterceptor(StethoInterceptor())     // 스테토를 만들어줌
-//            .build()
-
         val retrofit = Retrofit.Builder()
             .baseUrl("http://mellowcode.org/")
             .addConverterFactory(GsonConverterFactory.create())
-//            .client(client)         // 클라이언트 = 스테토 ( 네트워크 확인 )
             .build()
         service = retrofit.create(RetrofitService::class.java)
     }
