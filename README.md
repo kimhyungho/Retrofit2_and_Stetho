@@ -1,22 +1,16 @@
-Retrofit2 and Stheto
+Retrofit
 ============
-How to use Retrofit and Stehto 
+How to use Retrofit
 
 Official Homepage
 -----------
 https://square.github.io/retrofit/
 
-http://facebook.github.io/stetho/
 
 Version
 -----------
  retrofit:2.9.0
- retrofit2:converter-gson:2.6.2
- 
- stetho:stetho:1.5.1'
- stetho:stetho-okhttp3:1.5.1'
- stetho:stetho-js-rhino:1.5.1'
- 
+ retrofit2:converter-gson:2.6.2 
  
 What is Retrofit?
 -----------
