@@ -96,7 +96,7 @@ class MasterApplication : Application() {
 
 </manifest>
 ```
-*RetrofitService
+* RetrofitService
 ```
 // GET, POST, 
 import retrofit2.Call
@@ -115,7 +115,7 @@ interface RetrofitService {
 }
 ```
 
-*Class (YOU CAN RECIEVE THIS CLASS FORM)
+* Class (YOU CAN RECIEVE THIS CLASS FORM)
 ```
 import java.io.Serializable
 
